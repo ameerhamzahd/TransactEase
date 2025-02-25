@@ -59,33 +59,35 @@
     </section>
 
     <!-- Login Form -->
-    <div class="my-5 hero">
+    <div class="my-5">
       <div class="relative hero-content -top-10">
         <div class="w-full max-w-sm shadow-2xl card bg-base-100 shrink-0">
           <form class="card-body">
             <div class="form-control">
               <label class="label text-bold">
-                <span class="label-text">Mobile Number</span>
+                <span class="font-bold label-text">Mobile Number</span>
               </label>
-              <input type="number" placeholder="Enter Mobile Number" class="input input-bordered" required />
+              <input id="input-mobile-number" type="number" placeholder="Enter Mobile Number" class="input input-bordered" required />
             </div>
             <div class="form-control">
               <label class="label">
-                <span class="label-text">4 Digit Pin</span>
+                <span class="font-bold label-text">6 Digit Pin</span>
               </label>
-              <input type="password" placeholder="Enter 4 Digit Pin" class="input input-bordered" required />
+              <input id="input-pin" type="password" placeholder="Enter 6 Digit Pin" class="input input-bordered" required />
               <label class="label">
-                <a href="#" class="label-text-alt link link-hover">Forgot password?</a>
+                <a href="#" class="font-bold label-text-alt link link-hover">Forgot password?</a>
               </label>
             </div>
             <div class="mt-6 form-control">
-              <button class="btn btn-primary">Login</button>
+              <button id="login-btn" class="font-bold btn btn-primary">Login</button>
             </div>
           </form>
         </div>
       </div>
     </div>
   </main>
+  
+  <script src="./script/login.js"></script>
 </body>
 
 </html>
