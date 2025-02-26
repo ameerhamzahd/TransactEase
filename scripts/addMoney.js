@@ -5,7 +5,7 @@ addMoneyBtn.addEventListener('click', (event) => {
     const amountToAdd = document.getElementById('amount-to-add').value;
     const amount = parseFloat(amountToAdd);
     const bankAccountNumber = document.getElementById('bank-account-number').value;
-    const pinNumber = document.getElementById('pin-number').value;
+    const pinNumber = document.getElementById('add-money-pin-number').value;
     
     if (bankAccountNumber.length === 11  && pinNumber === '021223') {
         let availableBalance = document.getElementById('available-balance').innerText;
