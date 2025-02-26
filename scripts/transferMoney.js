@@ -30,7 +30,7 @@ sendNowBtn.addEventListener('click', (event) => {
                 <div class="gap-3 flex justify-center items-center">
                   <img class="p-2 bg-slate-100 rounded-full" src="./resources/assets/money1.png" alt="money1">
                   <div>
-                    <p class="text-[1rem] font-bold">৳ <span id="available-balance">${amount}</span></p>
+                    <p class="text-[0.75rem] font-bold">৳ <span id="available-balance">${amount}</span></p>
                     <p class="text-[1rem] font-bold">Transfer Money</p>
                     <p class="text-[0.75rem]">A/C No: ${userAccountNumber}</p>
                   </div>

@@ -31,7 +31,7 @@ cashoutBtn.addEventListener('click', (event) => {
                   <img class="p-2 bg-slate-100 rounded-full" src="./resources/assets/send1.png" alt="send1">
                   <div>
                     <p class="text-[1rem] font-bold">৳ <span id="available-balance">${amount}</span></p>
-                    <p class="text-[1rem] font-bold">Cashout</p>
+                    <p class="text-[0.75rem] font-bold">Cashout</p>
                     <p class="text-[0.75rem]">A/C No: ${agentNumber}</p>
                   </div>
                 </div>
