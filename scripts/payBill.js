@@ -8,9 +8,15 @@ payNowBtn.addEventListener('click', (event) => {
     const billerAccountNumber = document.getElementById('biller-account-number').value;
     const pinNumber = document.getElementById('pay-bill-pin-number').value;
 
-    if (billerAccountNumber.length === 11 && pinNumber === '021223') {
+    if (billerAccountNumber.length === 11 && pinNumber === '231185') {
         let availableBalance = document.getElementById('available-balance').innerText;
         let totalAmount = parseFloat(availableBalance);
+
+        if(amount > totalAmount) {
+          alert("Insufficient balance");
+          return;
+        }
+
         totalAmount = totalAmount - amount;
         document.getElementById('available-balance').innerText = totalAmount + '.00';
 
@@ -18,7 +24,7 @@ payNowBtn.addEventListener('click', (event) => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="flex flex-col gap-3 py-5 items-center">
+        <div class="flex flex-col gap-3 pt-5 items-center">
           <div class=" flex flex-col justify-center w-full max-w-sm shadow-xl card bg-base-100 shrink-0">
             <div class="flex justify-between p-5 items-center">
               <div class="">

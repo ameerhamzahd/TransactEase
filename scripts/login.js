@@ -6,7 +6,7 @@ loginBtn.addEventListener('click', (event) => {
     event.preventDefault();
     const mobileNumber = inputMobileNumber.value;
     const pin = inputPin.value;
-    if (mobileNumber.length === 11  && pin === '021223') {
+    if (mobileNumber.length === 11  && pin === '231185') {
         window.location.href = 'home.html';
     } else {
         alert('Invalid Information. Try Again!');

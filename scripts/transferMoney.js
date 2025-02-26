@@ -7,9 +7,15 @@ sendNowBtn.addEventListener('click', (event) => {
     const userAccountNumber = document.getElementById('user-account-number').value;
     const pinNumber = document.getElementById('transfer-money-pin-number').value;
 
-    if (userAccountNumber.length === 11 && pinNumber === '021223') {
+    if (userAccountNumber.length === 11 && pinNumber === '231185') {
         let availableBalance = document.getElementById('available-balance').innerText;
         let totalAmount = parseFloat(availableBalance);
+
+        if(amount > totalAmount) {
+          alert("Insufficient balance");
+          return;
+        }
+
         totalAmount = totalAmount - amount;
         document.getElementById('available-balance').innerText = totalAmount + '.00';
 
@@ -17,7 +23,7 @@ sendNowBtn.addEventListener('click', (event) => {
 
         const div = document.createElement('div');
         div.innerHTML = `
-        <div class="flex flex-col gap-3 py-5 items-center">
+        <div class="flex flex-col gap-3 pt-5 items-center">
           <div class=" flex flex-col justify-center w-full max-w-sm shadow-xl card bg-base-100 shrink-0">
             <div class="flex justify-between p-5 items-center">
               <div class="">
@@ -25,6 +31,7 @@ sendNowBtn.addEventListener('click', (event) => {
                   <img class="p-2 bg-slate-100 rounded-full" src="./resources/assets/money1.png" alt="money1">
                   <div>
                     <p class="text-[1rem] font-bold">৳ <span id="available-balance">${amount}</span></p>
+                    <p class="text-[1rem] font-bold">Transfer Money</p>
                     <p class="text-[0.75rem]">A/C No: ${userAccountNumber}</p>
                   </div>
                 </div>

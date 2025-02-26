@@ -8,7 +8,12 @@ addMoneyBtn.addEventListener('click', (event) => {
     const bankAccountNumber = document.getElementById('bank-account-number').value;
     const pinNumber = document.getElementById('add-money-pin-number').value;
 
-    if (bankAccountNumber.length === 11 && pinNumber === '021223') {
+    if(amount < 0) {
+      alert("Invalid amount. Please enter a positive number.");
+      return;
+    }
+
+    if (bankAccountNumber.length === 11 && pinNumber === '231185') {
         let availableBalance = document.getElementById('available-balance').innerText;
         let totalAmount = parseFloat(availableBalance);
         totalAmount = totalAmount + amount;
@@ -18,7 +23,7 @@ addMoneyBtn.addEventListener('click', (event) => {
 
         const div = document.createElement('div');
         div.innerHTML =`
-        <div class="flex flex-col gap-3 py-5 items-center">
+        <div class="flex flex-col gap-3 pt-5 items-center">
           <div class=" flex flex-col justify-center w-full max-w-sm shadow-xl card bg-base-100 shrink-0">
             <div class="flex justify-between p-5 items-center">
               <div class="">
