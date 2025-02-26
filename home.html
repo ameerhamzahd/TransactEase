@@ -334,22 +334,22 @@
                 <label class="label">
                   <span class="font-bold label-text">Biller Account Number</span>
                 </label>
-                <input type="number" placeholder="Enter 11 Digit Number" class="input input-bordered" required />
+                <input id="biller-account-number" type="number" placeholder="Enter 11 Digit Number" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="font-bold label-text">Amount</span>
                 </label>
-                <input type="number" placeholder="Amount to Pay" class="input input-bordered" required />
+                <input id="amount-to-pay" type="number" placeholder="Amount to Pay" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="font-bold label-text">Pin Number</span>
                 </label>
-                <input type="password" placeholder="Enter 6 Digit Pin" class="input input-bordered" required />
+                <input id="pay-bill-pin-number" type="password" placeholder="Enter 6 Digit Pin" class="input input-bordered" required />
               </div>
               <div class="mt-6 form-control">
-                <button class="font-bold btn btn-primary">Pay Now</button>
+                <button id="pay-now-btn" class="font-bold btn btn-primary">Pay Now</button>
               </div>
             </form>
           </div>
@@ -407,6 +407,7 @@
   <script src="./scripts/addMoney.js"></script>
   <script src="./scripts/cashout.js"></script>
   <script src="./scripts/transferMoney.js"></script>
+  <script src="./scripts/payBill.js"></script>
   <script src="./scripts/logout.js"></script>
 </body>
 
