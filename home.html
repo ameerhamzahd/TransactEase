@@ -54,7 +54,7 @@
         <div class="gap-3 navbar-start">
           <img class="w-[2.5rem]" src="./resources/assets/Group.png" alt="group">
           <div>
-            <p class="text-[1rem] font-bold">৳ 500.00</p>
+            <p class="text-[1rem] font-bold">৳ <span id="available-balance">500.00</span></p>
             <p class="text-[0.75rem]">Available Balance</p>
           </div>
         </div>
@@ -94,7 +94,7 @@
         <!-- Transaction Options -->
         <div class="grid grid-cols-3 gap-3">
           <div>
-            <div
+            <div id="add-money-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/wallet1.png" alt="wallet1" class="rounded-xl h-[1.5rem]" />
@@ -106,7 +106,7 @@
           </div>
 
           <div>
-            <div
+            <div id="cashout-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/send1.png" alt="send1" class="rounded-xl h-[1.5rem]" />
@@ -118,7 +118,7 @@
           </div>
 
           <div>
-            <div
+            <div id="transfer-money-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/money1.png" alt="money1" class="rounded-xl h-[1.5rem]" />
@@ -130,7 +130,7 @@
           </div>
 
           <div>
-            <div
+            <div id="get-bonus-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/bonus1.png" alt="bonus1" class="rounded-xl h-[1.5rem]" />
@@ -142,7 +142,7 @@
           </div>
 
           <div>
-            <div
+            <div id="pay-bill-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/purse1.png" alt="purse1" class="rounded-xl h-[1.5rem]" />
@@ -154,7 +154,7 @@
           </div>
 
           <div>
-            <div
+            <div id="transactions-selection"
               class="shadow-sm card bg-base-100 hover:border-2 hover:text-blue-600 hover:border-blue-600 hover:cursor-pointer min-h-[10.25rem]">
               <figure class="pt-10">
                 <img src="./resources/assets/transaction1.png" alt="transaction1" class="rounded-xl h-[1.5rem]" />
@@ -168,7 +168,7 @@
     </section>
 
     <!-- Add Money -->
-    <section class="p-5">
+    <section id="add-money-container" class="p-5">
       <h2 class="text-[1.25rem] font-bold">Add Money</h2>
 
       <div class="py-5">
@@ -194,22 +194,22 @@
                 <label class="label">
                   <span class="font-bold label-text">Bank Account Number</span>
                 </label>
-                <input type="number" placeholder="Enter 11 Digit Number" class="input input-bordered" required />
+                <input id="bank-account-number" type="number" placeholder="Enter 11 Digit Number" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="font-bold label-text">Amount</span>
                 </label>
-                <input type="number" placeholder="Amount to Add" class="input input-bordered" required />
+                <input id="amount-to-add" type="number" placeholder="Amount to Add" class="input input-bordered" required />
               </div>
               <div class="form-control">
                 <label class="label">
                   <span class="font-bold label-text">Pin Number</span>
                 </label>
-                <input type="password" placeholder="Enter 6 Digit Pin" class="input input-bordered" required />
+                <input id="pin-number" type="password" placeholder="Enter 6 Digit Pin" class="input input-bordered" required />
               </div>
               <div class="mt-6 form-control">
-                <button class="font-bold btn btn-primary">Add Money</button>
+                <button id="add-money-btn" class="font-bold btn btn-primary">Add Money</button>
               </div>
             </form>
           </div>
@@ -401,6 +401,8 @@
       </div>
     </section> -->
   </main>
+
+  <script src="./script/addMoney.js"></script>
 </body>
 
 </html>
