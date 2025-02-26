@@ -7,7 +7,7 @@ loginBtn.addEventListener('click', (event) => {
     const mobileNumber = inputMobileNumber.value;
     const pin = inputPin.value;
     if (mobileNumber.length === 11  && pin === '231185') {
-        window.location.href = 'home.html';
+        window.location.href = 'main.html';
     } else {
         alert('Invalid Information. Try Again!');
     }
